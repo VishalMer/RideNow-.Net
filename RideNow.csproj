@@ -178,6 +178,7 @@
     <Content Include="js\vendor\jquery-2.2.4.min.js" />
     <Content Include="login.aspx" />
     <Content Include="register.aspx" />
+    <Content Include="user-dashboard.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -223,6 +224,20 @@
     </Compile>
     <Compile Include="register.Master.designer.cs">
       <DependentUpon>register.Master</DependentUpon>
+    </Compile>
+    <Compile Include="user-dashboard.aspx.cs">
+      <DependentUpon>user-dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user-dashboard.aspx.designer.cs">
+      <DependentUpon>user-dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user-dashboard.Master.cs">
+      <DependentUpon>user-dashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user-dashboard.Master.designer.cs">
+      <DependentUpon>user-dashboard.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -337,6 +352,7 @@
     <Content Include="scss\theme\_reset.scss" />
     <Content Include="scss\theme\_variables.scss" />
     <Content Include="register.Master" />
+    <Content Include="user-dashboard.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

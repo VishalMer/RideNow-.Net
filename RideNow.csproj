@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
+    <Content Include="admin\index.aspx" />
     <Content Include="App_Data\RideNow.mdf" />
     <Content Include="App_Data\RideNow_log.ldf">
       <DependentUpon>RideNow.mdf</DependentUpon>
@@ -197,6 +198,19 @@
     <Compile Include="about.Master.designer.cs">
       <DependentUpon>about.Master</DependentUpon>
     </Compile>
+    <Compile Include="admin\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\index.Master.cs">
+      <DependentUpon>index.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\index.Master.designer.cs">
+      <DependentUpon>index.Master</DependentUpon>
+    </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -285,6 +299,7 @@
     <Content Include="login.Master" />
     <Content Include="about.Master" />
     <Content Include="contact.Master" />
+    <Content Include="admin\index.Master" />
     <None Include="packages.config" />
     <Content Include="scss\bootstrap.scss" />
     <Content Include="scss\bootstrap\bootstrap-grid.scss" />

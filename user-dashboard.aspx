@@ -191,7 +191,6 @@
                             </div>
                             <div class="card-body">
                                 <div class="rides-list">
-                                    <!-- ################## MODIFICATION STARTS HERE ################## -->
                                     <asp:Repeater ID="rptRecentRides" runat="server">
                                         <ItemTemplate>
                                             <div class="ride-item">
@@ -215,7 +214,6 @@
                                         </ItemTemplate>
                                     </asp:Repeater>
                                     <asp:Literal ID="litNoRides" runat="server" Visible="false"></asp:Literal>
-                                    <!-- ################## MODIFICATION ENDS HERE ################## -->
                                 </div>
                             </div>
                         </div>

@@ -72,6 +72,7 @@
     <Content Include="App_Data\RideNow_log.ldf">
       <DependentUpon>RideNow.mdf</DependentUpon>
     </Content>
+    <Content Include="contact.aspx" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\auth.css" />
     <Content Include="css\bootstrap.css" />
@@ -196,6 +197,19 @@
     <Compile Include="about.Master.designer.cs">
       <DependentUpon>about.Master</DependentUpon>
     </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.Master.cs">
+      <DependentUpon>contact.Master</DependentUpon>
+    </Compile>
+    <Compile Include="contact.Master.designer.cs">
+      <DependentUpon>contact.Master</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -270,6 +284,7 @@
     <Content Include="img\blog\.DS_Store" />
     <Content Include="login.Master" />
     <Content Include="about.Master" />
+    <Content Include="contact.Master" />
     <None Include="packages.config" />
     <Content Include="scss\bootstrap.scss" />
     <Content Include="scss\bootstrap\bootstrap-grid.scss" />

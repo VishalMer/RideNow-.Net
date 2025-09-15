@@ -72,6 +72,7 @@
     <Content Include="App_Data\RideNow_log.ldf">
       <DependentUpon>RideNow.mdf</DependentUpon>
     </Content>
+    <Content Include="book-ride.aspx" />
     <Content Include="contact.aspx" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\auth.css" />
@@ -193,9 +194,24 @@
     </Compile>
     <Compile Include="about.Master.cs">
       <DependentUpon>about.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="about.Master.designer.cs">
       <DependentUpon>about.Master</DependentUpon>
+    </Compile>
+    <Compile Include="book-ride.aspx.cs">
+      <DependentUpon>book-ride.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="book-ride.aspx.designer.cs">
+      <DependentUpon>book-ride.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="book-ride.Master.cs">
+      <DependentUpon>book-ride.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="book-ride.Master.designer.cs">
+      <DependentUpon>book-ride.Master</DependentUpon>
     </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
@@ -206,6 +222,7 @@
     </Compile>
     <Compile Include="contact.Master.cs">
       <DependentUpon>contact.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="contact.Master.designer.cs">
       <DependentUpon>contact.Master</DependentUpon>
@@ -285,6 +302,7 @@
     <Content Include="login.Master" />
     <Content Include="about.Master" />
     <Content Include="contact.Master" />
+    <Content Include="book-ride.Master" />
     <None Include="packages.config" />
     <Content Include="scss\bootstrap.scss" />
     <Content Include="scss\bootstrap\bootstrap-grid.scss" />

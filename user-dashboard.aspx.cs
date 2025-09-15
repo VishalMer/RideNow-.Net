@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -30,6 +31,7 @@ namespace RideNow
                 {
                     string userId = Session["UserID"].ToString();
                     displayUser(userId);
+                    DisplayRecentRides(userId);
                 }
             }
         }
@@ -46,6 +48,29 @@ namespace RideNow
                 string userName = result.ToString();
                 litUserNameWelcome.Text = userName;
                 litUserNameProfile.Text = userName;
+            }
+            con.Close();
+        }
+
+        protected void DisplayRecentRides(string currentUserId)
+        {
+            getcon();
+            string query = "select top 3 pickup_address, dropoff_address, pickup_time, total_fare, booking_status from Bookings where user_id = '" + currentUserId + "' order by created_at desc";
+
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows.Count > 0)
+            {
+                rptRecentRides.DataSource = dt;
+                rptRecentRides.DataBind();
+            }
+            else
+            {
+                rptRecentRides.Visible = false;
+                litNoRides.Visible = true;
+                litNoRides.Text = "<div style='text-align:center; padding: 20px;'>You have no recent rides.</div>";
             }
             con.Close();
         }

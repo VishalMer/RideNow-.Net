@@ -185,63 +185,40 @@
                         <div class="col-lg-8">
                             <!-- Recent Rides Card -->
                             <div class="dashboard-card recent-rides-card">
-                                <div class="card-header">
-                                    <h3><i class="fa fa-history"></i>Recent Rides</h3>
-                                    <a href="#" class="view-all">View All</a>
-                                </div>
-                                <div class="card-body">
-                                    <div class="rides-list">
-                                        <div class="ride-item">
-                                            <div class="ride-icon">
-                                                <i class="fa fa-car"></i>
-                                            </div>
-                                            <div class="ride-details">
-                                                <div class="ride-route">
-                                                    <span class="from">Downtown</span> <i class="fa fa-arrow-right"></i><span class="to">Airport</span>
+                            <div class="card-header">
+                                <h3><i class="fa fa-history"></i>Recent Rides</h3>
+                                <a href="#" class="view-all">View All</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="rides-list">
+                                    <!-- ################## MODIFICATION STARTS HERE ################## -->
+                                    <asp:Repeater ID="rptRecentRides" runat="server">
+                                        <ItemTemplate>
+                                            <div class="ride-item">
+                                                <div class="ride-icon">
+                                                    <i class="fa fa-car"></i>
                                                 </div>
-                                                <div class="ride-meta">
-                                                    <span class="date">Sep 12, 2024</span> <span class="time">2:30 PM</span> <span class="fare">$22.50</span>
+                                                <div class="ride-details">
+                                                    <div class="ride-route">
+                                                        <span class="from"><%# Eval("pickup_address") %></span> <i class="fa fa-arrow-right"></i><span class="to"><%# Eval("dropoff_address") %></span>
+                                                    </div>
+                                                    <div class="ride-meta">
+                                                        <span class="date"><%# Convert.ToDateTime(Eval("pickup_time")).ToString("MMM dd, yyyy") %></span>
+                                                        <span class="time"><%# Convert.ToDateTime(Eval("pickup_time")).ToString("h:mm tt") %></span>
+                                                        <span class="fare"><%# string.Format("${0:F2}", Eval("total_fare")) %></span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="ride-status completed">
-                                                <i class="fa fa-check"></i><span>Completed</span>
-                                            </div>
-                                        </div>
-                                        <div class="ride-item">
-                                            <div class="ride-icon">
-                                                <i class="fa fa-car"></i>
-                                            </div>
-                                            <div class="ride-details">
-                                                <div class="ride-route">
-                                                    <span class="from">Station</span> <i class="fa fa-arrow-right"></i><span class="to">Hotel</span>
-                                                </div>
-                                                <div class="ride-meta">
-                                                    <span class="date">Sep 10, 2024</span> <span class="time">11:15 AM</span> <span class="fare">$12.00</span>
+                                                <div class="ride-status completed">
+                                                    <i class="fa fa-check"></i><span><%# Eval("booking_status") %></span>
                                                 </div>
                                             </div>
-                                            <div class="ride-status completed">
-                                                <i class="fa fa-check"></i><span>Completed</span>
-                                            </div>
-                                        </div>
-                                        <div class="ride-item">
-                                            <div class="ride-icon">
-                                                <i class="fa fa-car"></i>
-                                            </div>
-                                            <div class="ride-details">
-                                                <div class="ride-route">
-                                                    <span class="from">Office</span> <i class="fa fa-arrow-right"></i><span class="to">Home</span>
-                                                </div>
-                                                <div class="ride-meta">
-                                                    <span class="date">Sep 8, 2024</span> <span class="time">6:45 PM</span> <span class="fare">$18.75</span>
-                                                </div>
-                                            </div>
-                                            <div class="ride-status completed">
-                                                <i class="fa fa-check"></i><span>Completed</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                    <asp:Literal ID="litNoRides" runat="server" Visible="false"></asp:Literal>
+                                    <!-- ################## MODIFICATION ENDS HERE ################## -->
                                 </div>
                             </div>
+                        </div>
 
                             <!-- Favorite Locations Card -->
                             <div class="dashboard-card favorites-card">

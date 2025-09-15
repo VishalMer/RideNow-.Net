@@ -452,7 +452,7 @@
                     <nav class="admin-nav">
                         <div class="container">
                             <ul class="nav">
-                                <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-dashboard"></i>Dashboard </a></li>
+                                <li class="nav-item"><a class="nav-link" href="index.aspx"><i class="fa fa-dashboard"></i>Dashboard </a></li>
                                 <li class="nav-item"><a class="nav-link" href="drivers.aspx"><i class="fa fa-users"></i>Drivers </a></li>
                                 <li class="nav-item"><a class="nav-link" href="riders.aspx"><i class="fa fa-user"></i>Riders </a></li>
                                 <li class="nav-item"><a class="nav-link" href="rides.aspx"><i class="fa fa-road"></i>Rides </a></li>

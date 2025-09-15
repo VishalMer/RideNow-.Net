@@ -94,6 +94,8 @@
     <Content Include="css\nice-select.css" />
     <Content Include="css\responsive.css" />
     <Content Include="css\style.css" />
+    <Content Include="driver\dashboard.aspx" />
+    <Content Include="driver\profile.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\Linearicons-Free.svg" />
     <Content Include="img\about-img.jpg" />
@@ -198,6 +200,7 @@
     </Compile>
     <Compile Include="about.Master.cs">
       <DependentUpon>about.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="about.Master.designer.cs">
       <DependentUpon>about.Master</DependentUpon>
@@ -211,6 +214,7 @@
     </Compile>
     <Compile Include="admin\drivers.Master.cs">
       <DependentUpon>drivers.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\drivers.Master.designer.cs">
       <DependentUpon>drivers.Master</DependentUpon>
@@ -224,6 +228,7 @@
     </Compile>
     <Compile Include="admin\index.Master.cs">
       <DependentUpon>index.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\index.Master.designer.cs">
       <DependentUpon>index.Master</DependentUpon>
@@ -237,6 +242,7 @@
     </Compile>
     <Compile Include="admin\riders.Master.cs">
       <DependentUpon>riders.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\riders.Master.designer.cs">
       <DependentUpon>riders.Master</DependentUpon>
@@ -250,6 +256,7 @@
     </Compile>
     <Compile Include="admin\rides.Master.cs">
       <DependentUpon>rides.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\rides.Master.designer.cs">
       <DependentUpon>rides.Master</DependentUpon>
@@ -263,6 +270,7 @@
     </Compile>
     <Compile Include="admin\support-tickets.Master.cs">
       <DependentUpon>support-tickets.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\support-tickets.Master.designer.cs">
       <DependentUpon>support-tickets.Master</DependentUpon>
@@ -276,9 +284,38 @@
     </Compile>
     <Compile Include="contact.Master.cs">
       <DependentUpon>contact.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="contact.Master.designer.cs">
       <DependentUpon>contact.Master</DependentUpon>
+    </Compile>
+    <Compile Include="driver\dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="driver\dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="driver\dashboard.Master.cs">
+      <DependentUpon>dashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="driver\dashboard.Master.designer.cs">
+      <DependentUpon>dashboard.Master</DependentUpon>
+    </Compile>
+    <Compile Include="driver\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="driver\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="driver\profile.Master.cs">
+      <DependentUpon>profile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="driver\profile.Master.designer.cs">
+      <DependentUpon>profile.Master</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -360,6 +397,8 @@
     <Content Include="admin\riders.Master" />
     <Content Include="admin\rides.Master" />
     <Content Include="admin\support-tickets.Master" />
+    <Content Include="driver\dashboard.Master" />
+    <Content Include="driver\profile.Master" />
     <None Include="packages.config" />
     <Content Include="scss\bootstrap.scss" />
     <Content Include="scss\bootstrap\bootstrap-grid.scss" />

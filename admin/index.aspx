@@ -366,7 +366,7 @@
                         <h2><i class="fa fa-car"></i>RideNow Admin Panel</h2>
                     </div>
                     <div class="col-md-6 text-right">
-                        <span>Welcome, Admin</span> <a href="../index.html" class="btn btn-outline-light ml-3">Logout</a>
+                        <span>Welcome, Admin</span> <a href="../index.apex" class="btn btn-outline-light ml-3">Logout</a>
                     </div>
                 </div>
             </div>
@@ -376,11 +376,11 @@
         <nav class="admin-nav">
             <div class="container">
                 <ul class="nav">
-                    <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fa fa-dashboard"></i>Dashboard </a></li>
-                    <li class="nav-item"><a class="nav-link" href="drivers.html"><i class="fa fa-users"></i>Drivers </a></li>
-                    <li class="nav-item"><a class="nav-link" href="riders.html"><i class="fa fa-user"></i>Riders </a></li>
-                    <li class="nav-item"><a class="nav-link" href="rides.html"><i class="fa fa-road"></i>Rides </a></li>
-                    <li class="nav-item"><a class="nav-link" href="support-tickets.html"><i class="fa fa-ticket"></i>Support </a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.apex"><i class="fa fa-dashboard"></i>Dashboard </a></li>
+                    <li class="nav-item"><a class="nav-link" href="drivers.apex"><i class="fa fa-users"></i>Drivers </a></li>
+                    <li class="nav-item"><a class="nav-link" href="riders.apex"><i class="fa fa-user"></i>Riders </a></li>
+                    <li class="nav-item"><a class="nav-link" href="rides.apex"><i class="fa fa-road"></i>Rides </a></li>
+                    <li class="nav-item"><a class="nav-link" href="support-tickets.apex"><i class="fa fa-ticket"></i>Support </a></li>
                 </ul>
             </div>
         </nav>

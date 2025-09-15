@@ -366,7 +366,7 @@
                         <h2><i class="fa fa-car"></i>RideNow Admin Panel</h2>
                     </div>
                     <div class="col-md-6 text-right">
-                        <span>Welcome, Admin</span> <a href="../index.apex" class="btn btn-outline-light ml-3">Logout</a>
+                        <span>Welcome, Admin</span> <a href="../index.aspx" class="btn btn-outline-light ml-3">Logout</a>
                     </div>
                 </div>
             </div>
@@ -376,11 +376,11 @@
         <nav class="admin-nav">
             <div class="container">
                 <ul class="nav">
-                    <li class="nav-item"><a class="nav-link active" href="index.apex"><i class="fa fa-dashboard"></i>Dashboard </a></li>
-                    <li class="nav-item"><a class="nav-link" href="drivers.apex"><i class="fa fa-users"></i>Drivers </a></li>
-                    <li class="nav-item"><a class="nav-link" href="riders.apex"><i class="fa fa-user"></i>Riders </a></li>
-                    <li class="nav-item"><a class="nav-link" href="rides.apex"><i class="fa fa-road"></i>Rides </a></li>
-                    <li class="nav-item"><a class="nav-link" href="support-tickets.apex"><i class="fa fa-ticket"></i>Support </a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.aspx"><i class="fa fa-dashboard"></i>Dashboard </a></li>
+                    <li class="nav-item"><a class="nav-link" href="drivers.aspx"><i class="fa fa-users"></i>Drivers </a></li>
+                    <li class="nav-item"><a class="nav-link" href="riders.aspx"><i class="fa fa-user"></i>Riders </a></li>
+                    <li class="nav-item"><a class="nav-link" href="rides.aspx"><i class="fa fa-road"></i>Rides </a></li>
+                    <li class="nav-item"><a class="nav-link" href="support-tickets.aspx"><i class="fa fa-ticket"></i>Support </a></li>
                 </ul>
             </div>
         </nav>
@@ -397,13 +397,13 @@
 
             <!-- Quick Actions -->
             <div class="quick-actions">
-                <a href="drivers.html" class="quick-action-btn"><i class="fa fa-users"></i>
+                <a href="drivers.aspx" class="quick-action-btn"><i class="fa fa-users"></i>
                 <h6>Manage Drivers</h6>
-                </a><a href="riders.html" class="quick-action-btn"><i class="fa fa-user"></i>
+                </a><a href="riders.aspx" class="quick-action-btn"><i class="fa fa-user"></i>
                 <h6>Manage Riders</h6>
-                </a><a href="rides.html" class="quick-action-btn"><i class="fa fa-road"></i>
+                </a><a href="rides.aspx" class="quick-action-btn"><i class="fa fa-road"></i>
                 <h6>View Rides</h6>
-                </a><a href="support-tickets.html" class="quick-action-btn"><i class="fa fa-ticket"></i>
+                </a><a href="support-tickets.aspx" class="quick-action-btn"><i class="fa fa-ticket"></i>
                 <h6>Support Tickets</h6>
                 </a>
             </div>

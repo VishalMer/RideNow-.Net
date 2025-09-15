@@ -68,7 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
+    <Content Include="admin\drivers.aspx" />
     <Content Include="admin\index.aspx" />
+    <Content Include="admin\riders.aspx" />
+    <Content Include="admin\rides.aspx" />
+    <Content Include="admin\support-tickets.aspx" />
     <Content Include="App_Data\RideNow.mdf" />
     <Content Include="App_Data\RideNow_log.ldf">
       <DependentUpon>RideNow.mdf</DependentUpon>
@@ -198,6 +202,19 @@
     <Compile Include="about.Master.designer.cs">
       <DependentUpon>about.Master</DependentUpon>
     </Compile>
+    <Compile Include="admin\drivers.aspx.cs">
+      <DependentUpon>drivers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\drivers.aspx.designer.cs">
+      <DependentUpon>drivers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\drivers.Master.cs">
+      <DependentUpon>drivers.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\drivers.Master.designer.cs">
+      <DependentUpon>drivers.Master</DependentUpon>
+    </Compile>
     <Compile Include="admin\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -210,6 +227,45 @@
     </Compile>
     <Compile Include="admin\index.Master.designer.cs">
       <DependentUpon>index.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\riders.aspx.cs">
+      <DependentUpon>riders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\riders.aspx.designer.cs">
+      <DependentUpon>riders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\riders.Master.cs">
+      <DependentUpon>riders.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\riders.Master.designer.cs">
+      <DependentUpon>riders.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\rides.aspx.cs">
+      <DependentUpon>rides.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\rides.aspx.designer.cs">
+      <DependentUpon>rides.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\rides.Master.cs">
+      <DependentUpon>rides.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\rides.Master.designer.cs">
+      <DependentUpon>rides.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\support-tickets.aspx.cs">
+      <DependentUpon>support-tickets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\support-tickets.aspx.designer.cs">
+      <DependentUpon>support-tickets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\support-tickets.Master.cs">
+      <DependentUpon>support-tickets.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\support-tickets.Master.designer.cs">
+      <DependentUpon>support-tickets.Master</DependentUpon>
     </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
@@ -300,6 +356,10 @@
     <Content Include="about.Master" />
     <Content Include="contact.Master" />
     <Content Include="admin\index.Master" />
+    <Content Include="admin\drivers.Master" />
+    <Content Include="admin\riders.Master" />
+    <Content Include="admin\rides.Master" />
+    <Content Include="admin\support-tickets.Master" />
     <None Include="packages.config" />
     <Content Include="scss\bootstrap.scss" />
     <Content Include="scss\bootstrap\bootstrap-grid.scss" />

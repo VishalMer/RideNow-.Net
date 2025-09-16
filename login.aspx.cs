@@ -57,7 +57,7 @@ namespace RideNow
 
                 if (userRole == "Driver")
                 {
-                    Response.Redirect("driver/driver-dashboard.aspx");
+                    Response.Redirect("driver/dashboard.aspx");
                 }
                 else if(userRole == "Admin")
                 {

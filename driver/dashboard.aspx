@@ -40,7 +40,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="welcome-content">
-                            <h1 class="welcome-title">Welcome back, Mike!</h1>
+                            <h1 class="welcome-title">Welcome back, <asp:Literal ID="litDriverName" runat="server">Driver</asp:Literal>!</h1>
                             <p class="welcome-subtitle">
                                 Ready to drive? Let's get you connected with riders and earning money.</p>
                             <div class="quick-actions">
@@ -232,84 +232,35 @@
 				        <div class="dashboard-card ride-requests-card">
                             <div class="card-header">
                                 <h3><i class="fa fa-bell"></i>Ride Requests</h3>
-                                <span class="request-count">3 New</span>
+                                <asp:Literal ID="litRequestCount" runat="server"></asp:Literal>
                             </div>
                             <div class="card-body">
-                                <div class="requests-list">
-                                    <div class="request-item">
-                                        <div class="request-icon">
-                                            <i class="fa fa-user"></i>
-                                        </div>
-                                        <div class="request-details">
-                                            <div class="request-route">
-                                                <span class="from">Central Park</span> <i class="fa fa-arrow-right"></i><span class="to">Times Square</span>
-                                            </div>
-                                            <div class="request-meta">
-                                                <span class="distance">2.3 miles</span> <span class="fare">$12.50</span> <span class="time">5 min away</span>
-                                            </div>
-                                            <div class="rider-info">
-                                                <span class="rider-name">Sarah M.</span> <span class="rider-rating"><i class="fa fa-star"></i>4.8 </span>
-                                            </div>
-                                        </div>
-                                        <div class="request-actions">
-                                            <button class="btn btn-success btn-sm">
-                                                <i class="fa fa-check"></i>Accept
-                                            </button>
-                                            <button class="btn btn-outline btn-sm">
-                                                <i class="fa fa-times"></i>Decline
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="request-item">
-                                        <div class="request-icon">
-                                            <i class="fa fa-user"></i>
-                                        </div>
-                                        <div class="request-details">
-                                            <div class="request-route">
-                                                <span class="from">Brooklyn Bridge</span> <i class="fa fa-arrow-right"></i><span class="to">JFK Airport</span>
-                                            </div>
-                                            <div class="request-meta">
-                                                <span class="distance">18.7 miles</span> <span class="fare">$45.20</span> <span class="time">12 min away</span>
-                                            </div>
-                                            <div class="rider-info">
-                                                <span class="rider-name">John D.</span> <span class="rider-rating"><i class="fa fa-star"></i>4.9 </span>
-                                            </div>
-                                        </div>
-                                        <div class="request-actions">
-                                            <button class="btn btn-success btn-sm">
-                                                <i class="fa fa-check"></i>Accept
-                                            </button>
-                                            <button class="btn btn-outline btn-sm">
-                                                <i class="fa fa-times"></i>Decline
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="request-item">
-                                        <div class="request-icon">
-                                            <i class="fa fa-user"></i>
-                                        </div>
-                                        <div class="request-details">
-                                            <div class="request-route">
-                                                <span class="from">Manhattan Mall</span> <i class="fa fa-arrow-right"></i><span class="to">Grand Central</span>
-                                            </div>
-                                            <div class="request-meta">
-                                                <span class="distance">1.8 miles</span> <span class="fare">$8.75</span> <span class="time">3 min away</span>
-                                            </div>
-                                            <div class="rider-info">
-                                                <span class="rider-name">Emma L.</span> <span class="rider-rating"><i class="fa fa-star"></i>4.7 </span>
-                                            </div>
-                                        </div>
-                                        <div class="request-actions">
-                                            <button class="btn btn-success btn-sm">
-                                                <i class="fa fa-check"></i>Accept
-                                            </button>
-                                            <button class="btn btn-outline btn-sm">
-                                                <i class="fa fa-times"></i>Decline
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+    <div class="requests-list">
+        <asp:Repeater ID="rptRideRequests" runat="server">
+            <ItemTemplate>
+                <div class="request-item">
+                    <div class="request-icon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="request-details">
+                        <div class="request-route">
+                            <span class="from"><%# Eval("pickup_address") %></span> <i class="fa fa-arrow-right"></i><span class="to"><%# Eval("dropoff_address") %></span>
+                        </div>
+                        <div class="request-meta">
+                            <span class="distance">~ <%# (new Random(Eval("booking_id").GetHashCode())).Next(2, 15) %> miles</span>
+                            <span class="rider-name">by <%# Eval("full_name") %></span>
+                        </div>
+                    </div>
+                    <div class="request-actions">
+                        <button class="btn btn-success btn-sm"><i class="fa fa-check"></i>Accept</button>
+                        <button class="btn btn-outline btn-sm"><i class="fa fa-times"></i>Decline</button>
+                    </div>
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
+        <asp:Literal ID="litNoRequests" runat="server" Visible="false"></asp:Literal>
+    </div>
+</div>
                         </div>
 
 				<!-- Earnings Overview Card -->

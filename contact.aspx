@@ -136,35 +136,37 @@
                                     <label for="<%=txtMessage.ClientID%>">Message *</label>
                                     <asp:TextBox ID="txtMessage" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="6" placeholder="Tell us how we can help you..."></asp:TextBox>
                                 </div>
-                                <asp:Button ID="btnSendMessage" runat="server" Text="Send Message" CssClass="btn btn-primary btn-lg" />
+                                <asp:Button ID="btnSendMessage" runat="server" Text="Send Message" CssClass="btn btn-primary btn-lg" OnClick="btnSendMessage_Click" />
+
+                                <asp:Label ID="lblStatusMessage" runat="server" EnableViewState="false"></asp:Label>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-sidebar scroll-animate-right">
+                        <div class="sidebar-card scroll-animate-scale">
+                            <h3>Quick Help</h3>
+                            <div class="help-links">
+                                <a href="#" class="help-link"><i class="fa fa-question-circle"></i><span>Frequently Asked Questions</span> </a><a href="#" class="help-link"><i class="fa fa-book"></i><span>User Guide</span> </a><a href="#" class="help-link"><i class="fa fa-shield"></i><span>Safety Guidelines</span> </a><a href="#" class="help-link"><i class="fa fa-credit-card"></i><span>Payment Help</span> </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="contact-sidebar scroll-animate-right">
-                            <div class="sidebar-card scroll-animate-scale">
-                                <h3>Quick Help</h3>
-                                <div class="help-links">
-                                    <a href="#" class="help-link"><i class="fa fa-question-circle"></i><span>Frequently Asked Questions</span> </a><a href="#" class="help-link"><i class="fa fa-book"></i><span>User Guide</span> </a><a href="#" class="help-link"><i class="fa fa-shield"></i><span>Safety Guidelines</span> </a><a href="#" class="help-link"><i class="fa fa-credit-card"></i><span>Payment Help</span> </a>
+                        <div class="sidebar-card scroll-animate-scale delay-1">
+                            <h3>Response Times</h3>
+                            <div class="response-times">
+                                <div class="response-item">
+                                    <span class="response-type">Email</span> <span class="response-time">Within 24 hours</span>
                                 </div>
-                            </div>
-                            <div class="sidebar-card scroll-animate-scale delay-1">
-                                <h3>Response Times</h3>
-                                <div class="response-times">
-                                    <div class="response-item">
-                                        <span class="response-type">Email</span> <span class="response-time">Within 24 hours</span>
-                                    </div>
-                                    <div class="response-item">
-                                        <span class="response-type">Phone</span> <span class="response-time">Immediate</span>
-                                    </div>
-                                    <div class="response-item">
-                                        <span class="response-type">Live Chat</span> <span class="response-time">Within 5 minutes</span>
-                                    </div>
+                                <div class="response-item">
+                                    <span class="response-type">Phone</span> <span class="response-time">Immediate</span>
+                                </div>
+                                <div class="response-item">
+                                    <span class="response-type">Live Chat</span> <span class="response-time">Within 5 minutes</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
 
